@@ -20,7 +20,7 @@ const Banner = ({handleClaimFreeCredit}) => {
                 Beyond Boundaries Beyond Limits
                 </p>
                 <button onClick={handleClaimFreeCredit}
-                className="btn bg-yellow-300 border-none text-sm font-bold px-6 py-2 rounded-lg hover:bg-yellow-400 transition-colors outline outline-offset-8 outline-yellow-400"
+                className="btn border-none text-sm font-bold px-6 py-2 rounded-lg hover:bg-yellow-400 transition-colors outline outline-offset-8 outline-yellow-400 bg-gradient-to-r from-yellow-400 via-yellow-300 to-pink-300 animate-gradient"
                 >
                 Claim Free Credit
                 </button>

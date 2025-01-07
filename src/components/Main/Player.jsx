@@ -4,7 +4,7 @@ const Player = ({ player, choosePlayer }) => {
     const { name, country, image, role, battingType, bowlingType, biddingPrice } = player;
   
     return (
-      <div className="card bg-base-100 border border-gray-800 border-opacity-20">
+      <div className="card bg-base-100 border border-gray-800 border-opacity-20  transition-transform duration-1000 ease-in-out hover:-translate-y-3">
         <figure>
           <img
             className="w-full h-96 object-cover object-top"

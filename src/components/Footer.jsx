@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#06091A] text-neutral-content py-10">
       <div className="flex justify-center mb-10">
-        <img src={logoFooter} alt="" />
+        <img src={logoFooter} alt="" className="transition-transform duration-1000 ease-in-out hover:-translate-y-3" />
       </div>
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
       <div className="divider"></div>
       <div className="text-center text-gray-400">
-        <p>©2025 SKB Sakib All Rights Reserved</p>
+        <p>©2025 SKB Sakib All Rights Reserved.</p>
       </div>
     </footer>
   );
