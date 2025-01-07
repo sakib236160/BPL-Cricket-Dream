@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main/Main";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   const [coinBalance, setCoinBalance] = useState(0);
@@ -30,6 +31,8 @@ const App = () => {
         {/*------------------------ Main section----------------- */}
         <Main coinBalance={coinBalance} setCoinBalance={setCoinBalance}></Main>
       </div>
+      {/*------------------------ Newsletter section----------------- */}
+      <Newsletter></Newsletter>
       <ToastContainer autoClose={1300} theme="colored" />
     </div>
   );

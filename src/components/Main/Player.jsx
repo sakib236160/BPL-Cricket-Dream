@@ -29,9 +29,11 @@ const Player = ({ player, choosePlayer }) => {
               {role}
             </button>
           </div>
-          <div className="divider"></div>
+          {/* <div className="divider">
+
+          </div> */}
   
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mt-6">
             <div className="flex justify-between">
               <h3 className="font-bold text-xl">Rating</h3>
               <div className="rating">
@@ -65,9 +67,9 @@ const Player = ({ player, choosePlayer }) => {
             </div>
             <div className="flex justify-between">
               <p className="font-bold">{battingType}</p>
-              <p className="font-bold">{bowlingType}</p>
+              <p className="font-normal" style={{ color: "rgba(19, 19, 19, 0.70)" }}>{bowlingType}</p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <p className="font-bold">
                 Price: <i className="fa-solid fa-dollar-sign"></i>
                 {biddingPrice}

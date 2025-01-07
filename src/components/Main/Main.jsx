@@ -74,20 +74,18 @@ const Main = ({ setCoinBalance, coinBalance }) => {
     <div className="mb-52 container mx-auto ">
       <div className="flex justify-between mx-5 my-10">
         <h2 className="text-3xl font-bold text-gray-900">
-          {playersHandle
-            ? "Available Players"
-            : `Selected Players (${addPlayers.length}/6)`}
+          {playersHandle ? "Available Players" : `Selected Players (${addPlayers.length}/6)`}
         </h2>
         <div className="join font-bold text-2xl">
           <button
             onClick={() => HandlePlayersBtn(true)}
-            className="btn join-item bg-yellow-300"
+            className={`btn join-item ${playersHandle ? 'bg-yellow-300' : 'bg-white'}`}
           >
             Available
           </button>
           <button
             onClick={() => HandlePlayersBtn(false)}
-            className="btn join-item "
+            className={`btn join-item ${!playersHandle ? 'bg-yellow-300' : 'bg-white'}`}
           >
             Selected ({addPlayers.length})
           </button>
