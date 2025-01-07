@@ -5,6 +5,7 @@ import Main from "./components/Main/Main";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [coinBalance, setCoinBalance] = useState(0);
@@ -33,6 +34,8 @@ const App = () => {
       </div>
       {/*------------------------ Newsletter section----------------- */}
       <Newsletter></Newsletter>
+      {/*------------------------ Footer section----------------- */}
+      <Footer></Footer>
       <ToastContainer autoClose={1300} theme="colored" />
     </div>
   );
