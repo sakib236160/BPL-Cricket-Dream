@@ -1,23 +1,36 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
+import Main from "./components/Main/Main";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [coinBalance, setCoinBalance] = useState(0);
 
   const handleClaimFreeCredit = () => {
-    const newBalance = coinBalance + 6000000; 
-    setCoinBalance(newBalance); 
-    // console.log("New Balance:", newBalance)
+
+    setCoinBalance((prevBalance) => {
+      const newBalance = prevBalance + 6000000;
+
+      toast.success("Coin successfully added !", {
+        position: "top-center",
+      });
+      return newBalance;
+    });
   };
 
   return (
-    <div className="md:container mx-auto">
-      {/*------------------------ Navbar section----------------- */}
-      <Navbar coinBalance={coinBalance}></Navbar>
-      {/*------------------------ Banner section----------------- */}
-      <Banner handleClaimFreeCredit={handleClaimFreeCredit}></Banner>
-      {/*------------------------ Main section----------------- */}
+    <div>
+      <div className="md:container mx-auto">
+        {/*------------------------ Navbar section----------------- */}
+        <Navbar coinBalance={coinBalance}></Navbar>
+        {/*------------------------ Banner section----------------- */}
+        <Banner handleClaimFreeCredit={handleClaimFreeCredit}></Banner>
+        {/*------------------------ Main section----------------- */}
+        <Main coinBalance={coinBalance} setCoinBalance={setCoinBalance}></Main>
+      </div>
+      <ToastContainer autoClose={1300} theme="colored" />
     </div>
   );
 };
