@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <h5 className="font-bold text-lg text-white">About Us</h5>
           <p className="mt-2 text-gray-400">
-            We are a passionate team dedicated to providing the best services to
+            We are a passionate team dedicated to a providing the best services to
             our customers.
           </p>
         </div>
